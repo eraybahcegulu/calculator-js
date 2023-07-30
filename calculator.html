@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hesap Makinesi</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="HesapMakinesi.css">
+    <script src="HesapMakinesi.js"> </script>
+    <link rel="shortcut icon" type="x-icon" href="title_icon.png">
+</head>
+
+<body>
+    <form name="HesapMakinesi">
+        <div id="div-islem"> <!-- İşlem ekranı -->
+            <input id="input-islem" type="text" name="islem" placeholder="" readonly>
+        </div>
+        <div id="div-sonuc"> <!-- Çıktı ekranı -->
+            <input id="input-sonuc" type="text" name="sonuc" placeholder="" readonly>
+        </div>
+        <table> <!-- Buton tablosu -->
+            <tr> <!-- onclick ile butonlara tıklanıldığı zaman ilgili javascript fonksiyonunun çalışmasını sağlıyoruz-->
+                <td> <button type="button" onclick="randomsifre()"> Fonk.1 </button> </td>
+                <td> <button type="button" onclick="mutlakdeger()"> |x| </button> </td>
+                <td> <button type="button" onclick="tekcift()"> Fonk.2 </button> </td>
+                <td> <button type="button" onclick="temizle()"> C </button> </td>
+            </tr>
+            <tr>
+                <td> <button type="button" onclick="ikiussu()"> 2^x </button> </td>
+                <td> <button type="button" onclick="onussu()"> 10^x </button> </td>
+                <td> <button type="button" onclick="karekok()"> Kök(x) </button> </td>
+                <td> <button type="button" onclick="mod()"> % </button> </td>
+            </tr>
+            <tr>
+                <td> <button type="button" onclick="log10()"> log(x) </button> </td>
+                <td> <button type="button" onclick="sin()"> sin(x) </button> </td>
+                <td> <button type="button" onclick="cos()"> cos(x) </button> </td>
+                <td> <button type="button" value="/" onclick="deger(value)"> / </button> </td>
+            </tr>
+            <tr>
+                <td> <button type="button" value="7" onclick="deger(value)"> 7 </button> </td>
+                <td> <button type="button" value="8" onclick="deger(value)"> 8 </button> </td>
+                <td> <button type="button" value="9" onclick="deger(value)"> 9 </button> </td>
+                <td> <button type="button" value="*" onclick="deger(value)"> * </button> </td>
+            </tr>
+            <tr>
+                <td> <button type="button" value="4" onclick="deger(value)"> 4 </button> </td>
+                <td> <button type="button" value="5" onclick="deger(value)"> 5 </button> </td>
+                <td> <button type="button" value="6" onclick="deger(value)"> 6 </button> </td>
+                <td> <button type="button" value="-" onclick="deger(value)"> - </button> </td>
+            </tr>
+            <tr>
+                <td> <button type="button" value="1" onclick="deger(value)"> 1 </button> </td>
+                <td> <button type="button" value="2" onclick="deger(value)"> 2 </button> </td>
+                <td> <button type="button" value="3" onclick="deger(value)"> 3 </button> </td>
+                <td> <button type="button" value="+" onclick="deger(value)"> + </button> </td>
+            </tr>
+            <tr>
+                <td> <button id="button-bottom-left" type="button" value="," onclick="deger(value)"> , </button> </td>
+                <td> <button type="button" value="0" onclick="deger(value)"> 0 </button> </td>
+                <td> <button type="button" value="." onclick="deger(value)"> . </button> </td>
+                <td> <button id="button-bottom-right" type="button" onclick="esittir()"> = </button> </td>
+            </tr>
+        </table>
+    </form>
+</body>
+
+</html>
